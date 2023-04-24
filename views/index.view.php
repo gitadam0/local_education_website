@@ -14,7 +14,7 @@ include("partials/header.view.php");
 <div class="card-deck my-5 mx-auto " style="width: 85%;">
     
         <div class="card  col-md-4" >
-            <a href="#"><img src="views/android.png" class="card-img-top" alt="..."></a>
+            <a href="android.php"><img src="views/android.png" class="card-img-top" alt="..."></a>
             <div class="card-body">
                 <h5 class="card-title">Android</h5>
                 <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
@@ -23,7 +23,7 @@ include("partials/header.view.php");
         </div>
         
         <div class="card  col-md-4">
-            <a href="#"><img src="views\ios1.jfif" class="card-img-top" alt="..."></a>
+            <a href="ios.php"><img src="views\ios1.jfif" class="card-img-top" alt="..."></a>
             <div class="card-body">
                 <h5 class="card-title">Ios</h5>
                 <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
@@ -32,7 +32,7 @@ include("partials/header.view.php");
         </div>
 
         <div class="card  col-md-4">
-            <a href="#"><img src="views/aif.jpg" class="card-img-top" alt="..."></a>
+            <a href="multi.php"><img src="views/aif.jpg" class="card-img-top" alt="..."></a>
             <div class="card-body">
                 <h5 class="card-title">Multiplatform</h5>
                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
