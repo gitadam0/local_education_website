@@ -14,6 +14,11 @@
             background-color :red;
             height:300px;
         }
+
+        .card:hover{
+          box-shadow: 5px 5px 5px gray;
+          margin-right:30px;
+        }
        
     </style>
 
