@@ -6,7 +6,10 @@
                 "/post" => "controllers/postDetail.php",
                 "/logout" => "controllers/logout.php",
                 "/dashboard/create" => "controllers/dashboard/create.php",
-                "/exercices" => "controllers/exercices.php"
+                "/exercices" => "controllers/exercices.php",
+                "/exercice" => "controllers/exerciceDetail.php",
+                "/profile" => "controllers/profile.php",
+                "/user" => "controllers/user.php"
             ];
             
     $path = strtolower(parse_url($_SERVER["REQUEST_URI"])["path"]);

@@ -12,3 +12,63 @@ pre {
     padding: 15px;
     border-radius: 5px;
 }
+
+.mymodal.show{
+    display: flex ;
+}
+
+.mymodal{
+    
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(32, 32, 32, 0.228);
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+.mymodal .mymodal-content{
+    overflow: auto;
+    background-color: aliceblue;
+    border-radius: 5px;
+}
+.mymodal .mymodal-content-header{
+    border-bottom: 1px solid #545454;
+    
+
+}
+.mymodal .mymodal-content-title{
+    padding: 10px 20px 5px;
+}
+.mymodal .mymodal-content-desc{
+    padding: 10px 20px;
+}
+.oldlevel,.currentLevel{
+    border-radius:10% 40%;
+    width:50px;
+    height:50px;
+    text-align:center;
+    line-height:50px;
+    font-size:25px;
+    background-repeat:no-repeat;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+}
+.oldlevel::before,.currentLevel::before{
+    content: "";
+    background-color: #ba2d0b;
+background-image: linear-gradient(319deg, #ba2d0b 0%, #fe7f2d 37%, #ffbf46 100%);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    left: 0;
+}
+.currentLevel::before{
+    background-color: #f71735;
+background-image: linear-gradient(147deg, #f71735 0%, #db3445 74%);}

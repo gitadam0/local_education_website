@@ -1,5 +1,17 @@
 <?php 
     $currentPage = strtolower(parse_url($_SERVER["REQUEST_URI"])["path"]);
+    $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
+    // Get domain portion
+    $myUrl .= '://'.$_SERVER['HTTP_HOST'];
+    // Get path to script
+    $myUrl .= $_SERVER['REQUEST_URI'];
+    // Add path info, if any
+    if (!empty($_SERVER['PATH_INFO'])) $myUrl .= $_SERVER['PATH_INFO'];
+    // Add query string, if any (some servers include a ?, some don't)
+    if (!empty($_SERVER['QUERY_STRING'])) $myUrl .= '?'.ltrim($_SERVER['REQUEST_URI'],'?');
+    $d = " hg ";
+    $c = trim($d);
+    echo strlen($c);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -8,6 +20,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?=$heading?></title>
+    <link rel="canonical" href="<?= $myUrl?>">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/bootstrap.min.css">
 </head>
@@ -24,7 +37,7 @@
                 <a class="nav-link <?= $currentPage == "/posts"? "active":"" ?>" href="/posts">Posts</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link <?= $currentPage == "/exercices"? "active":"" ?>" href="#">Exercices</a>
+                <a class="nav-link <?= $currentPage == "/exercices"? "active":"" ?>" href="/exercices">Exercices</a>
             </li>
             <?php
 
